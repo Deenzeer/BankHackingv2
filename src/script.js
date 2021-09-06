@@ -13,12 +13,12 @@ async function start(){
     const dialing = playSound('assets/dialing.mp3', 0.1)
 
     // mock loading screen
-    setInformationText('ESTABLISHING CONNECTION')
+    setInformationText('NAWIĄZYWANIE POŁĄCZENIA')
     await delay(0.8)
-    setInformationText('DOING SOME HACKERMANS STUFF...')
-    await delay(1)
-    setInformationText('ACCESS CODE FLAGGED; REQUIRES HUMAN CAPTCHA INPUT..')
-    await delay(0.8)
+    setInformationText('WYKONYWANIE HAKERSKICH CZYNNOŚCI...')
+    await delay(3)
+    setInformationText('KOD DOSTĘPU UZYSKANY; POTRZEBNA AUTORYZACJA OSOBY..')
+    await delay(2)
 
     // hide text and show squares
     $('#text-container').classList.toggle('hidden')
@@ -41,14 +41,14 @@ async function start(){
     $('#text-container').classList.remove('hidden')
     
     // display result
-    setInformationText((result) ? 'the system has been bypassed. ✅' : "The system didn't accept your answers ⛔️")
+    setInformationText((result) ? 'System został złamany. ✅' : "System nie zaakceptował twoich odpowedzi ⛔️")
     if(!result) $('.spy-icon').src = 'assets/failed.png'
 
     $('#answer-reveal').textContent = answer
 
-    $('#submitted-reveal').textContent = (result) ?             'Good job, indeed the' :
-                                        ((submitted == null) ?  "The time ran out," : 
-                                                                `You wrote "${submitted || ' '}", the`)
+    $('#submitted-reveal').textContent = (result) ?             'Dobra robota, dokładnie' :
+                                        ((submitted == null) ?  "Czas upłynął," : 
+                                                                `Wpisałeś "${submitted || ' '}", the`)
 
     $('.try-again').classList.remove('hidden')
 }
