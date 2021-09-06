@@ -48,7 +48,7 @@ async function start(){
 
     $('#submitted-reveal').textContent = (result) ?             'Dobra robota, dokładnie' :
                                         ((submitted == null) ?  "Czas upłynął," : 
-                                                                `Wpisałeś "${submitted || ' '}", the`)
+                                                                `Wpisałeś "${submitted || ' '}", `)
 
     $('.try-again').classList.remove('hidden')
 }
