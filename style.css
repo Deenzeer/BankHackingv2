@@ -319,7 +319,7 @@ textarea:focus, input:focus{
 .screen-square{
   min-width: 1200px;
   width: auto;
-  height: 700px;
+  height: 800px;
   background-color: var(--primary);
 
 }
