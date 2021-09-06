@@ -1,4 +1,4 @@
-# 5city Bank Hack Minigame
+# Bank Hack Minigame
 
 An fork of attempt to recreate the bank hack minigame on the GTA server NoPixel.  
 Feel free to **star** the project if you like it.  
