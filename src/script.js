@@ -17,8 +17,25 @@ async function start(){
     await delay(0.8)
     setInformationText('WYKONYWANIE HAKERSKICH CZYNNOŚCI...')
     await delay(3)
-    setInformationText('KOD DOSTĘPU UZYSKANY; POTRZEBNA AUTORYZACJA OSOBY..')
-    await delay(2)
+    let nuumber = math.random(1,100)
+    if nuumber > 0 && nuumber <25
+        setInformationText('PRÓBA UZYSKANIA KODU DOSTĘPU #1...')
+        await delay(math.random(1,5))
+    else
+        setInformationText('KOD DOSTĘPU UZYSKANY; POTRZEBNA AUTORYZACJA OSOBY..')
+        await delay(2)
+    if nuumber > 26 && nuumber < 70
+        setInformationText('PRÓBA UZYSKANIA KODU DOSTĘPU #2...')
+        await delay(math.random(1,5))
+    else
+        setInformationText('KOD DOSTĘPU UZYSKANY; POTRZEBNA AUTORYZACJA OSOBY..')
+        await delay(2)
+    if nuumber > 71
+        setInformationText('PRÓBA UZYSKANIA KODU DOSTĘPU #3...')
+        await delay(math.random(1,5))
+    else
+        setInformationText('KOD DOSTĘPU UZYSKANY; POTRZEBNA AUTORYZACJA OSOBY..')
+        await delay(2)
 
     // hide text and show squares
     $('#text-container').classList.toggle('hidden')
